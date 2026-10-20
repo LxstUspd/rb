@@ -3,7 +3,7 @@
 ## Быстрый старт (один файл)
 
 1. Откройте Roblox Studio → пустой Baseplate-проект.
-2. **File → Import from File** и выберите `NeonNexusDefense.rbxmx`.
+2. **File → Import from File** и выберите `NeonNexusDefense.rbxlx`.
    Импорт создаст всю структуру скриптов:
    ```
    ReplicatedStorage

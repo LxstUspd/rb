@@ -4,7 +4,7 @@
 
 ## Быстрый старт
 1. Откройте Roblox Studio → пустой Baseplate-проект.
-2. **File → Import from File** → выберите [`NeonNexusDefense/NeonNexusDefense.rbxmx`](NeonNexusDefense/NeonNexusDefense.rbxmx).
+2. **File → Import from File** → выберите [`NeonNexusDefense/NeonNexusDefense.rbxlx`](NeonNexusDefense/NeonNexusDefense.rbxlx).
    Импорт создаст все скрипты в ReplicatedStorage / ServerScriptService / StarterPlayerScripts.
 3. Достройте карту и архетипы по инструкции: [`NeonNexusDefense/SETUP_INSTRUCTIONS.md`](NeonNexusDefense/SETUP_INSTRUCTIONS.md).
 4. Нажмите Play — сервер залогинит `[NND] Server bootstrap complete`, волна 1 начнётся через 5 секунд.
@@ -14,7 +14,7 @@
 |---|---|
 | `NeonNexusDefense/Docs/GDD.md` | Геймдизайн-документ: башни, враги, экономика, волны, баланс |
 | `NeonNexusDefense/Docs/ARCHITECTURE.md` | Архитектура: ООП-модули, RemoteEvents, репликация |
-| `NeonNexusDefense/NeonNexusDefense.rbxmx` | Единый файл импорта в Studio (все скрипты) |
+| `NeonNexusDefense/NeonNexusDefense.rbxlx` | Единый файл импорта в Studio (все скрипты) |
 | `NeonNexusDefense.zip` | Архив всего проекта |
 | `NeonNexusDefense/**` | Исходники .lua по папкам сервисов |
 
