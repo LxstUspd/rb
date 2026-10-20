@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<roblox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
-  <Item class="Workspace" Referent="w000000">
-    <Children>
-      <Item class="ReplicatedStorage" Referent="RBX000001">
-        <Properties>
-          <string name="Name">ReplicatedStorage</string>
-        </Properties>
-        <Children>
-          <Item class="Folder" Referent="RBX000002">
-            <Properties>
-              <string name="Name">Modules</string>
-            </Properties>
-            <Children>
-              <Item class="Folder" Referent="RBX000003">
-                <Properties>
-                  <string name="Name">Enemy</string>
-                </Properties>
-                <Children>
-                  <Item class="ModuleScript" Referent="RBX000004">
-                    <Properties>
-                      <string name="Name">Enemy</string>
-                      <ProtectedString name="Source">--!strict
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+<Item class="ReplicatedStorage" Referent="RBX000019"><Properties><string name="Name">ReplicatedStorage</string></Properties><Children><Item class="Folder" Referent="RBX000011"><Properties><string name="Name">Modules</string></Properties><Children><Item class="Folder" Referent="RBX000002"><Properties><string name="Name">Enemy</string></Properties><Children><Item class="ModuleScript" Referent="RBX000001"><Properties><string name="Name">Enemy</string><ProtectedString name="Source">--!strict
 -- Enemy.lua — ООП-класс врага с движением по статическим waypoints.
 -- ReplicatedStorage.Modules.Enemy.Enemy
 --
@@ -199,20 +179,7 @@ function EnemyClass.destroy(self: Enemy)
 end
 
 return EnemyClass
-</ProtectedString>
-                    </Properties>
-                  </Item>
-                </Children>
-              </Item>
-              <Item class="Folder" Referent="RBX000005">
-                <Properties>
-                  <string name="Name">Projectile</string>
-                </Properties>
-                <Children>
-                  <Item class="ModuleScript" Referent="RBX000006">
-                    <Properties>
-                      <string name="Name">Pool</string>
-                      <ProtectedString name="Source">--!strict
+</ProtectedString></Properties></Item></Children></Item><Item class="Folder" Referent="RBX000005"><Properties><string name="Name">Projectile</string></Properties><Children><Item class="ModuleScript" Referent="RBX000003"><Properties><string name="Name">Pool</string><ProtectedString name="Source">--!strict
 -- Pool.lua — generic object pool для моделей (враги, снаряды, VFX).
 -- ReplicatedStorage.Modules.Projectile.Pool
 --
@@ -284,13 +251,7 @@ function PoolClass.prefill(self: Pool, count: number)
 end
 
 return PoolClass
-</ProtectedString>
-                    </Properties>
-                  </Item>
-                  <Item class="ModuleScript" Referent="RBX000007">
-                    <Properties>
-                      <string name="Name">Projectile</string>
-                      <ProtectedString name="Source">--!strict
+</ProtectedString></Properties></Item><Item class="ModuleScript" Referent="RBX000004"><Properties><string name="Name">Projectile</string><ProtectedString name="Source">--!strict
 -- Projectile.lua — снаряд с линейным лерпом (без физики) и пулингом.
 -- ReplicatedStorage.Modules.Projectile.Projectile
 --
@@ -385,20 +346,7 @@ function ProjectileClass.update(self: Projectile, dt: number): boolean
 end
 
 return ProjectileClass
-</ProtectedString>
-                    </Properties>
-                  </Item>
-                </Children>
-              </Item>
-              <Item class="Folder" Referent="RBX000008">
-                <Properties>
-                  <string name="Name">Shared</string>
-                </Properties>
-                <Children>
-                  <Item class="ModuleScript" Referent="RBX000009">
-                    <Properties>
-                      <string name="Name">Config</string>
-                      <ProtectedString name="Source">--!strict
+</ProtectedString></Properties></Item></Children></Item><Item class="Folder" Referent="RBX000008"><Properties><string name="Name">Shared</string></Properties><Children><Item class="ModuleScript" Referent="RBX000006"><Properties><string name="Name">Config</string><ProtectedString name="Source">--!strict
 -- Config.lua — единый источник баланса (ReplicatedStorage.Modules.Shared).
 -- Сервер и клиент require-ят один модуль =&gt; цифры всегда синхронны.
 
@@ -465,13 +413,7 @@ local Config = {
 }
 
 return Config
-</ProtectedString>
-                    </Properties>
-                  </Item>
-                  <Item class="ModuleScript" Referent="RBX000010">
-                    <Properties>
-                      <string name="Name">Types</string>
-                      <ProtectedString name="Source">--!strict
+</ProtectedString></Properties></Item><Item class="ModuleScript" Referent="RBX000007"><Properties><string name="Name">Types</string><ProtectedString name="Source">--!strict
 -- Types.lua — общие типы для Neon Nexus Defense (ReplicatedStorage.Modules.Shared)
 
 export type EnemyKind = "Runner" | "Golem" | "Drone" | "Boss"
@@ -515,20 +457,7 @@ export type WaveDefinition = {
 return {
 	EnemyKind = nil :: any, -- type-only placeholder (не используется в рантайме)
 }
-</ProtectedString>
-                    </Properties>
-                  </Item>
-                </Children>
-              </Item>
-              <Item class="Folder" Referent="RBX000011">
-                <Properties>
-                  <string name="Name">Tower</string>
-                </Properties>
-                <Children>
-                  <Item class="ModuleScript" Referent="RBX000012">
-                    <Properties>
-                      <string name="Name">Tower</string>
-                      <ProtectedString name="Source">--!strict
+</ProtectedString></Properties></Item></Children></Item><Item class="Folder" Referent="RBX000010"><Properties><string name="Name">Tower</string></Properties><Children><Item class="ModuleScript" Referent="RBX000009"><Properties><string name="Name">Tower</string><ProtectedString name="Source">--!strict
 -- Tower.lua — ООП-класс башни: поиск цели через Spatial Query API и стрельба.
 -- ReplicatedStorage.Modules.Tower.Tower
 --
@@ -735,29 +664,8 @@ function TowerClass.tick(self: Tower, dt: number, registry: { [BasePart]: Enemy 
 end
 
 return TowerClass
-</ProtectedString>
-                    </Properties>
-                  </Item>
-                </Children>
-              </Item>
-            </Children>
-          </Item>
-        </Children>
-      </Item>
-      <Item class="ServerScriptService" Referent="RBX000013">
-        <Properties>
-          <string name="Name">ServerScriptService</string>
-        </Properties>
-        <Children>
-          <Item class="Folder" Referent="RBX000014">
-            <Properties>
-              <string name="Name">Server</string>
-            </Properties>
-            <Children>
-              <Item class="Script" Referent="RBX000015">
-                <Properties>
-                  <string name="Name">Main</string>
-                  <ProtectedString name="Source">--!strict
+</ProtectedString></Properties></Item></Children></Item></Children></Item></Children></Item>
+<Item class="ServerScriptService" Referent="RBX000020"><Properties><string name="Name">ServerScriptService</string></Properties><Children><Item class="Folder" Referent="RBX000015"><Properties><string name="Name">Server</string></Properties><Children><Item class="Script" Referent="RBX000012"><Properties><string name="Name">Main</string><ProtectedString name="Source">--!strict
 -- Main.server.lua — bootstrap: создаёт Remotes, папки Runtime, запускает системы.
 -- ВАЖНО: WaveManager требует существующие RemoteEvents, поэтому они создаются ЗДЕСЬ,
 -- до require(WaveManager). В проде можно задать их прямо в Studio через Explorer.
@@ -935,13 +843,7 @@ end)
 ---------------------------------------------------------------------------
 require(script:WaitForChild("WaveManager"))
 print("[NND] Server bootstrap complete")
-</ProtectedString>
-                </Properties>
-              </Item>
-              <Item class="ModuleScript" Referent="RBX000016">
-                <Properties>
-                  <string name="Name">PathRuntime</string>
-                  <ProtectedString name="Source">--!strict
+</ProtectedString></Properties></Item><Item class="ModuleScript" Referent="RBX000013"><Properties><string name="Name">PathRuntime</string><ProtectedString name="Source">--!strict
 -- PathRuntime.lua — предрассчёт статического пути из Part'ов Workspace.Waypoints.
 -- Вызывается ОДИН раз при старте сервера; дальше только читается.
 -- Если путь станет динамическим (мазы, разрушаемые мосты) — сюда же встраивается
@@ -995,13 +897,7 @@ function PathRuntime.getPath(): PathData
 end
 
 return PathRuntime
-</ProtectedString>
-                </Properties>
-              </Item>
-              <Item class="Script" Referent="RBX000017">
-                <Properties>
-                  <string name="Name">WaveManager</string>
-                  <ProtectedString name="Source">--!strict
+</ProtectedString></Properties></Item><Item class="Script" Referent="RBX000014"><Properties><string name="Name">WaveManager</string><ProtectedString name="Source">--!strict
 -- WaveManager.server.lua — генератор волн, спавн врагов, цикл движения и начисление наград.
 -- ServerScriptService.Server.WaveManager
 --
@@ -1257,27 +1153,8 @@ task.spawn(function()
 		wave += 1
 	end
 end)
-</ProtectedString>
-                </Properties>
-              </Item>
-            </Children>
-          </Item>
-        </Children>
-      </Item>
-      <Item class="StarterPlayerScripts" Referent="RBX000018">
-        <Properties>
-          <string name="Name">StarterPlayerScripts</string>
-        </Properties>
-        <Children>
-          <Item class="Folder" Referent="RBX000019">
-            <Properties>
-              <string name="Name">Client</string>
-            </Properties>
-            <Children>
-              <Item class="LocalScript" Referent="RBX000020">
-                <Properties>
-                  <string name="Name">HudController</string>
-                  <ProtectedString name="Source">--!strict
+</ProtectedString></Properties></Item></Children></Item></Children></Item>
+<Item class="StarterPlayerScripts" Referent="RBX000021"><Properties><string name="Name">StarterPlayerScripts</string></Properties><Children><Item class="Folder" Referent="RBX000018"><Properties><string name="Name">Client</string></Properties><Children><Item class="LocalScript" Referent="RBX000016"><Properties><string name="Name">HudController</string><ProtectedString name="Source">--!strict
 -- HudController.client.lua — HUD: золото, HP ядра, волна, таймер, кнопка early-call.
 -- StarterPlayerScripts.Client.HudController (LocalScript)
 
@@ -1364,13 +1241,7 @@ earlyBtn.Activated:Connect(function()
 		timerLabel.Text = "Волна вызвана досрочно!"
 	end
 end)
-</ProtectedString>
-                </Properties>
-              </Item>
-              <Item class="LocalScript" Referent="RBX000021">
-                <Properties>
-                  <string name="Name">PlacementUI</string>
-                  <ProtectedString name="Source">--!strict
+</ProtectedString></Properties></Item><Item class="LocalScript" Referent="RBX000017"><Properties><string name="Name">PlacementUI</string><ProtectedString name="Source">--!strict
 -- PlacementUI.client.lua — выбор клетки и башни, «призрак», отправка намерений серверу.
 -- Клиент НИКОГДА не решает сам, можно ли строить: он лишь шлёт (kind, cellId),
 -- сервер валидирует (Main.server.lua). Призрак — чисто визуальный фидбек.
@@ -1471,13 +1342,5 @@ UserInputService.InputBegan:Connect(function(input, processed)
 		TowerActions:FireServer("buy", selectedKind, currentCell.Name)
 	end
 end)
-</ProtectedString>
-                </Properties>
-              </Item>
-            </Children>
-          </Item>
-        </Children>
-      </Item>
-    </Children>
-  </Item>
+</ProtectedString></Properties></Item></Children></Item></Children></Item>
 </roblox>

@@ -24,7 +24,7 @@
        ├── HudController          (LocalScript)
        └── PlacementUI            (LocalScript)
    ```
-3. Альтернатива rbxmx: Rojo (`rojo build`/свои map-файлы) или ручной copy-paste `.lua`
+3. Альтернатива rbxlx: Rojo (`rojo build`/свои map-файлы) или ручной copy-paste `.lua`
    файлов из папок проекта в соответствующие объекты Explorer (имя объекта = имя файла без суффикса).
 
 ## Что нужно достроить руками (арт + карта) — 15 минут
