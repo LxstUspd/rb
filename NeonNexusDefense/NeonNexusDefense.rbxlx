@@ -664,7 +664,7 @@ function TowerClass.tick(self: Tower, dt: number, registry: { [BasePart]: Enemy 
 end
 
 return TowerClass
-</ProtectedString></Properties></Item></Children></Item></Children></Item></Children></Children></Item>
+</ProtectedString></Properties></Item></Children></Item></Children></Item></Children></Item>
 <Item class="ServerScriptService" Referent="RBX000020"><Properties><string name="Name">ServerScriptService</string></Properties><Children><Item class="Folder" Referent="RBX000015"><Properties><string name="Name">Server</string></Properties><Children><Item class="Script" Referent="RBX000012"><Properties><string name="Name">Main</string><ProtectedString name="Source">--!strict
 -- Main.server.lua — bootstrap: создаёт Remotes, папки Runtime, запускает системы.
 -- ВАЖНО: WaveManager требует существующие RemoteEvents, поэтому они создаются ЗДЕСЬ,
@@ -1153,7 +1153,7 @@ task.spawn(function()
 		wave += 1
 	end
 end)
-</ProtectedString></Properties></Item></Children></Item></Children></Children></Item>
+</ProtectedString></Properties></Item></Children></Item></Children></Item>
 <Item class="StarterPlayerScripts" Referent="RBX000021"><Properties><string name="Name">StarterPlayerScripts</string></Properties><Children><Item class="Folder" Referent="RBX000018"><Properties><string name="Name">Client</string></Properties><Children><Item class="LocalScript" Referent="RBX000016"><Properties><string name="Name">HudController</string><ProtectedString name="Source">--!strict
 -- HudController.client.lua — HUD: золото, HP ядра, волна, таймер, кнопка early-call.
 -- StarterPlayerScripts.Client.HudController (LocalScript)
@@ -1342,5 +1342,5 @@ UserInputService.InputBegan:Connect(function(input, processed)
 		TowerActions:FireServer("buy", selectedKind, currentCell.Name)
 	end
 end)
-</ProtectedString></Properties></Item></Children></Item></Children></Children></Item>
+</ProtectedString></Properties></Item></Children></Item></Children></Item>
 </roblox>
