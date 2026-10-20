@@ -181,8 +181,6 @@ local function runWave(wave: number)
 	WaveEvents:FireAllClients("waveStarted", wave)
 
 	local definition = buildWave(wave)
-	local spawnedTotal = 0
-	local aliveAtStart = true
 
 	-- параллельные группы спавна
 	local threadsRemaining = 0
@@ -193,7 +191,6 @@ local function runWave(wave: number)
 				for _ = 1, group.count do
 					if gameOver then break end
 					spawnEnemy(group.kind :: EnemyKind)
-					spawnedTotal += 1
 					task.wait(group.interval)
 				end
 				threadsRemaining -= 1
@@ -208,9 +205,8 @@ local function runWave(wave: number)
 	repeat
 		local aliveCount = 0
 		for _ in activeEnemies do aliveCount += 1 end
-		aliveAtStart = aliveCount > 0
 		task.wait(0.25)
-	until not aliveAtStart or gameOver
+	until aliveCount == 0 or gameOver
 
 	if gameOver then return end
 
